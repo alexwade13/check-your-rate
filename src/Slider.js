@@ -18,20 +18,40 @@ export default class Frame extends Component {
           x: -400, y: 200
         }
       };
-    }
+  }
+
+  handleDrag(e, ui) {
+    const {x, y} = this.state.deltaPosition;
+    this.setState({
+      deltaPosition: {
+        x: x + ui.deltaX,
+        y: y + ui.deltaY,
+      }
+    });
+
+
+  }
+
   onStart() {
     console.log("starting")
   }
+
   onStop() {
     console.log("stopping")
   }
   render(){
     const dragHandlers = {onStart: this.onStart.bind(this), onStop: this.onStop.bind(this)};
+    const {deltaPosition, controlledPosition} = this.state;
+    const style = {"width": "" + 100*(deltaPosition.x/594) + "%"}
+    console.log(style)
     return(
-      <div> 
-        <Draggable grid={[25, 25]} {...dragHandlers}>
-            <div className="box">I snap to a 25 x 25 grid</div>
-        </Draggable>
+      <div className="slider"> 
+        <div className="cover" style={style}> 
+          <Draggable bounds={{left: 0, right: 594}} onDrag={this.handleDrag.bind(this)} grid={[17, 17] } axis="x" {...dragHandlers}>
+              <div className="box">{deltaPosition.x}</div>
+              
+          </Draggable>
+        </div>
       </div>
     )
   }

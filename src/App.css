@@ -121,24 +121,8 @@ nav ul {
     text-justify: inter-word;
 }
 
-.box {
+.box{
 
-  box-sizing: border-box;
-  background: #fff;
-  border: 1px solid #999;
-  border-radius: 3px;
-  width: 180px;
-  height: 180px;
-  margin: 10px;
-  padding: 10px;
-  float: left;
-}
-
-
-{
-    position: absolute;
-    left: -60px;
-    bottom: -23px;
     background: #fdfdfd;
     border: 1px solid #ccc;
     width: 141px;
@@ -153,3 +137,15 @@ nav ul {
 }
 
 
+.slider {
+  background-color: #CCCCCC;
+  height: 14px;
+  border-radius: .5rem;
+}
+
+.cover {
+  width:15%;
+  background-color: #2CCCD2;
+  height: 14px;
+  border-radius: .5rem;
+}
