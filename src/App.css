@@ -1,48 +1,44 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  background: url(grey_wash_wall.png);
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: white;
+  height: 100px;
   padding: 20px;
-  color: white;
+  /*color: white;*/
 }
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
+h1{
+  font-family: portrait_regular,Georgia,Serif !important;
+  font-size: 5rem !important;
+  margin-top: 0rem !important;
+  margin-bottom: 5rem !important;
+}
 
-ul li {
+li {
     float: left;
-}
-
-nav ul {
-    margin: auto;
-    float: right;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    padding-right:50px;
+    font-size: 2rem;
     line-height: 5.5rem;
+    display: inline-block;
 }
 
-.frame{
-  border:10px;
-  border-style: double;
-  background: #fff;
-  margin: auto;
-  width: 45%;
-  height: 100%;
-  padding: 5rem;
+.promise{
+  
 }
+ul{
+  margin: auto;
+  float:right;
+
+}
+
 
 .dotted-infinity {
   border-top:0px;
@@ -62,11 +58,21 @@ nav ul {
 .spacer {
   border-top:0px;
   border-bottom: 0px ;
-  width: 95%;
-  
-  
+  width: 95%;  
+}
 
-  
+#pips{
+  margin: 1.8rem 0 1rem;
+  color: #999;
+  box-sizing: border-box
+}
+
+.float-left{
+  float:left;
+}
+
+.float-right{
+  float:right;
 }
 
 .dotted-infinity:after {
@@ -94,9 +100,10 @@ nav ul {
     background: #fdfdfd;
     width: 31%;
     margin-right: 2%;
+    font-family: portrait_regular,Georgia,Serif;
+    font-size: 1.7rem
+
 }
-
-
 
 .continue {
     
@@ -117,8 +124,16 @@ nav ul {
 }
 
 .paragraph {
+  float:left;
+  display:inline-block;
+  margin:1rem;
+}
+
+.lower-paragraph{
+
   text-align: justify;
-    text-justify: inter-word;
+  text-justify: inter-word;
+
 }
 
 .box{
@@ -127,15 +142,115 @@ nav ul {
     border: 1px solid #ccc;
     width: 141px;
     border-radius: .5rem;
-    line-height: 3.5rem;
+    line-height: 4.5rem;
     text-align: center;
     color: #333;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 2.3rem;
     cursor: pointer;
     font-family: Arial,Helvetica,sans-serif;
+    margin-top:5rem;
+    margin-bottom:5rem;
+
 }
 
+.box::before {
+  position: absolute;
+  background:  url(arrow-left.png)  ;
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 10px; 
+  height: 20px;
+  content:"";
+  margin-right: 10px;  
+  left: 1rem;
+  top: 1.2rem;
+
+}
+
+.box::after {
+  position: absolute;
+  background:  url(arrow-right.png)  ;
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 10px; 
+  height: 20px;
+  content:"";
+  margin-right: 10px;  
+  right: .5rem;
+  top: 1.2rem;
+}
+
+@media (max-width:900px) {
+
+  .App-header{
+    display: none;
+  }
+  .select{
+    display:none;
+  }
+  .frame{
+
+    background: #fff;
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    padding: 5rem;
+  }
+
+  .half-rounded-card {
+    display: none
+  }  
+
+  .box{
+    width:100px;
+    font-size: 1.7rem;
+  }
+
+  .box::before {
+    position: absolute;
+    background:  url(arrow-left.png)  ;
+    background-size: 5px 10px;
+    display: inline-block;
+    width: 5px; 
+    height: 10px;
+    content:"";
+    margin-right: 10px;  
+    left: 1rem;
+    top: 1.7rem;
+
+  }
+
+  .box::after {
+    position: absolute;
+    background:  url(arrow-right.png)  ;
+    background-size: 5px 10px;
+    display: inline-block;
+    width: 5px; 
+    height: 10px;
+    content:"";
+    margin-right: 10px;  
+    right: .5rem;
+    top: 1.7rem;
+  }
+}
+
+
+@media (min-width:900px) {
+
+  .frame{
+    border:10px;
+    border-style: double;
+    background: #fff;
+    margin: auto;
+    width: 850px;
+    height: 100%;
+    padding: 5rem;
+  }
+  .half-rounded-card {
+    display: inline-block
+  }  
+}
 
 .slider {
   background-color: #CCCCCC;
@@ -144,7 +259,7 @@ nav ul {
 }
 
 .cover {
-  width:15%;
+  width:95%;
   background-color: #2CCCD2;
   height: 14px;
   border-radius: .5rem;
