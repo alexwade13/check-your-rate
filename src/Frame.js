@@ -61,7 +61,7 @@ export default class Frame extends Component {
     }
     render() {
       let info = this.getLoanAmountInfo.call(this,this.state.loan)
-      console.log(info)
+      
     	return (
           <div >
 

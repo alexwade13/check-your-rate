@@ -37,7 +37,7 @@ export default class Frame extends Component {
 
   calculateLoan(value){
     let interval = this.state.bounds.max / 32 //the amount of discrete values in the slide bar
-    console.log(interval,"interval",value, this.state.bounds.max)
+    
     let notch = Math.round(value / interval)
     let ret = notch * 1000 + 3000
     return ret
@@ -66,7 +66,7 @@ export default class Frame extends Component {
     return(
       <div id="slider" className="slider"> 
         <div className="cover" style={style}> 
-          <Draggable className="drag" position={deltaPosition} bounds={{left: this.state.bounds.min, right: max}} onDrag={this.handleDrag.bind(this)} grid={[max/32, max/32] } axis="x">
+          <Draggable position={deltaPosition} bounds={{left: this.state.bounds.min, right: max}} onDrag={this.handleDrag.bind(this)} grid={[max/32, max/32] } axis="x">
               <div className="box">${this.props.numberWithCommas(this.calculateLoan.call(this,deltaPosition.x))}</div>
               
           </Draggable>

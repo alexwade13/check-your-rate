@@ -30,9 +30,6 @@ li {
     display: inline-block;
 }
 
-.promise{
-  
-}
 ul{
   margin: auto;
   float:right;
@@ -136,6 +133,8 @@ ul{
 
 }
 
+/*slider style*/
+
 .box{
 
     background: #fdfdfd;
@@ -181,6 +180,21 @@ ul{
   top: 1.2rem;
 }
 
+.slider {
+  background-color: #CCCCCC;
+  height: 14px;
+  border-radius: .5rem;
+}
+
+.cover {
+  width:95%;
+  background-color: #2CCCD2;
+  height: 14px;
+  border-radius: .5rem;
+}
+
+
+/* for different sizes*/
 @media (max-width:900px) {
 
   .App-header{
@@ -250,17 +264,4 @@ ul{
   .half-rounded-card {
     display: inline-block
   }  
-}
-
-.slider {
-  background-color: #CCCCCC;
-  height: 14px;
-  border-radius: .5rem;
-}
-
-.cover {
-  width:95%;
-  background-color: #2CCCD2;
-  height: 14px;
-  border-radius: .5rem;
 }

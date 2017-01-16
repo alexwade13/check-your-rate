@@ -10,7 +10,7 @@ class App extends Component {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
           <div className="App-header">
-              <span className="promise">Promise Financial</span>
+              <span>Promise Financial</span>
               <ul id="mobilenav" class="initialState">
               
                 <li><a class="nav-link" href="/about">About Us</a></li>
